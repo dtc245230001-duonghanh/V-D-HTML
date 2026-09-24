@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành nhúng CSS vào HTML</title>
+
+    <!-- Phần 3 (Mô phỏng External CSS): Bình thường sẽ nhúng qua tệp ngoài như bên dưới -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- Phần 2: Internal Style (CSS nội bộ) -->
+    <style>
+        /* Định dạng cho phần 2 */
+        .internal-h1 {
+            color: #4CAF50; /* Màu xanh lá */
+        }
+        .internal-p {
+            color: #FF9800; /* Màu cam */
+        }
+
+        /* Định dạng mô phỏng cho phần 3 (External Style) */
+        .external-h1 {
+            color: #9C27B0; /* Màu tím */
+        }
+        .external-p {
+            color: #00BCD4; /* Màu xanh lam */
+        }
+
+        /* Định dạng chung để phân biệt các phần */
+        section {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Phần 1: Inline Style (Viết trực tiếp trong thuộc tính style) -->
+    <section>
+        <h2>Phần 1: Inline Style</h2>
+        <h1 style="color: #2196F3;">Tiêu đề sử dụng Inline CSS (Blue)</h1>
+        <p style="color: #F44336;">Đoạn văn bản mẫu được định dạng màu đỏ bằng Inline CSS.</p>
+    </section>
+
+    <!-- Phần 2: Internal Style (Sử dụng thẻ <style> ở phần <head>) -->
+    <section>
+        <h2>Phần 2: Internal Style</h2>
+        <h1 class="internal-h1">Tiêu đề sử dụng Internal CSS (Green)</h1>
+        <p class="internal-p">Đoạn văn bản mẫu được định dạng màu cam bằng Internal CSS.</p>
+    </section>
+
+    <!-- Phần 3: External Style (Gửi kèm liên kết tới tệp style.css) -->
+    <section>
+        <h2>Phần 3: External Style</h2>
+        <h1 class="external-h1">Tiêu đề sử dụng External CSS (Purple)</h1>
+        <p class="external-p">Đoạn văn bản mẫu được định dạng màu xanh lam đại diện cho External CSS.</p>
+    </section>
+
+</body>
+</html>
