@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành Định Kiểu Bảng Trong CSS</title>
+    <style>
+        /* CSS Tổng thể */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            padding: 30px 20px;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        /* 1. Đường viền & Gộp viền bảng */
+        table {
+            border-collapse: collapse; /* Bỏ đường viền đôi, nhập thành 1 viền duy nhất */
+            width: 100%;               /* 2. Chiều rộng bảng 100% */
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        /* Đường biên cho table, th, td */
+        table, th, td {
+            border: 1px solid #cbd5e1;
+        }
+
+        /* 3. Chiều cao & Định dạng thẻ tiêu đề <th> */
+        th {
+            height: 50px;              /* Thiết lập chiều cao cho th */
+            background-color: #2563eb; /* Màu nền header */
+            color: #ffffff;            /* Màu chữ header */
+            text-align: left;          /* 4. Căn lề trái theo chiều ngang */
+            font-weight: 600;
+        }
+
+        /* 5. Căn chỉnh theo chiều dọc & Padding */
+        th, td {
+            padding: 12px 15px;        /* Khoảng cách giữa đường viền và nội dung */
+            vertical-align: bottom;    /* Căn lề dưới theo chiều dọc */
+        }
+
+        /* 6. Màu sắc xen kẽ (Zebra Striping) & Hiệu ứng di chuột (Hover) */
+        tr:nth-child(even) {
+            background-color: #f1f5f9; /* Màu nền cho các hàng chẵn */
+        }
+
+        tr:hover {
+            background-color: #e2e8f0; /* Hiệu ứng đổi màu khi rê chuột qua hàng */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>DANH SÁCH KHÁCH HÀNG</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nguyễn Văn An</td>
+                <td>an.nguyen@example.com</td>
+                <td>0901234567</td>
+            </tr>
+            <tr>
+                <td>Trần Thị Bích</td>
+                <td>bich.tran@example.com</td>
+                <td>0912345678</td>
+            </tr>
+            <tr>
+                <td>Lê Hoàng Nam</td>
+                <td>nam.le@example.com</td>
+                <td>0987654321</td>
+            </tr>
+            <tr>
+                <td>Phạm Minh Khoa</td>
+                <td>khoa.pham@example.com</td>
+                <td>0933445566</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
