@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web của tôi - Định dạng CSS Selectors</title>
+    <style>
+        /* 1. Element Selector (Bộ chọn thẻ): Đổi màu nền trang web và font chữ */
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333333;
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 2. Element Selector: Căn giữa tiêu đề h1 */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* 3. ID Selector (#): Định dạng đoạn văn mô tả bản thân */
+        #about-me {
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: #ffffff;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        /* 4. Class Selector (.): Định dạng danh sách sở thích với các màu khác nhau */
+        .hobby-list {
+            list-style-type: square;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* Sử dụng pseudo-class :nth-child() để đổi màu khác nhau cho từng thẻ li */
+        .hobby-list li:nth-child(1) {
+            color: #e74c3c; /* Đỏ */
+            font-weight: bold;
+        }
+
+        .hobby-list li:nth-child(2) {
+            color: #27ae60; /* Xanh lá */
+            font-weight: bold;
+        }
+
+        .hobby-list li:nth-child(3) {
+            color: #8e44ad; /* Tím */
+            font-weight: bold;
+        }
+
+        /* 5. Class Selector cho nút bấm */
+        .btn-submit {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Tạo hiệu ứng mượt mà */
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 6. Pseudo-class Selector (:hover): Hiệu ứng rà chuột cho nút */
+        .btn-submit:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px); /* Nút nhích nhẹ lên trên */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 7. Grouping Selector (Nhóm nhiều bộ chọn): Áp dụng chung cho tiêu đề & danh sách */
+        h1, .hobby-list {
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tiêu đề chính -->
+    <h1>Trang web của tôi</h1>
+
+    <!-- Đoạn văn mô tả bản thân (Sử dụng ID Selector) -->
+    <p id="about-me">
+        Xin chào! Tôi là Dương Hạnh, một người đam mê tìm hiểu công nghệ và phát triển các sản phẩm web hữu ích.
+    </p>
+
+    <!-- Danh sách sở thích (Sử dụng Class Selector) -->
+    <h3>Sở thích của tôi:</h3>
+    <ul class="hobby-list">
+        <li>Lập trình & Viết code</li>
+        <li>Đọc sách phát triển bản thân</li>
+        <li>Du lịch & Trải nghiệm văn hóa</li>
+    </ul>
+
+    <!-- Nút bấm (Sử dụng Pseudo-class :hover) -->
+    <button class="btn-submit">Nhấn vào đây</button>
+
+</body>
+</html>
