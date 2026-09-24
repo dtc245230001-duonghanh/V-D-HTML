@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding: 30px 15px;
+            color: #333;
+        }
+
+        .survey-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header Form */
+        .survey-header {
+            background-color: #0073ea;
+            color: #ffffff;
+            padding: 25px 30px;
+        }
+
+        .survey-header h1 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .survey-header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Body Form */
+        .survey-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .required {
+            color: #d9534f;
+        }
+
+        /* Select / Input / Textarea */
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            outline: none;
+            background-color: #fff;
+        }
+
+        select:focus, input[type="text"]:focus, textarea:focus {
+            border-color: #0073ea;
+            box-shadow: 0 0 4px rgba(0, 115, 234, 0.25);
+        }
+
+        /* Radio & Checkbox Groups */
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .option-item input {
+            cursor: pointer;
+        }
+
+        /* Bảng đánh giá Matrix (Likert Scale) */
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+
+        .matrix-table th, .matrix-table td {
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .matrix-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .matrix-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+            width: 40%;
+        }
+
+        .matrix-table tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Nút Submit */
+        .btn-submit {
+            background-color: #0073ea;
+            color: #ffffff;
+            border: none;
+            padding: 10px 25px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="survey-card">
+        
+        <!-- Header -->
+        <div class="survey-header">
+            <h1>Market Research Survey</h1>
+            <p>Please take a few minutes to give us feedback about our product by filling out this short form.</p>
+        </div>
+
+        <!-- Form Body -->
+        <form class="survey-body" action="#" method="POST">
+
+            <!-- Câu 1: Độ tuổi -->
+            <div class="form-group">
+                <label class="form-label" for="ageGroup">What is your age range? <span class="required">*</span></label>
+                <select id="ageGroup" name="ageGroup" required>
+                    <option value="" disabled selected>-- Select age range --</option>
+                    <option value="18-24">18 - 24</option>
+                    <option value="25-34">25 - 34</option>
+                    <option value="35-49">35 - 49</option>
+                    <option value="50+">50 or older</option>
+                </select>
+            </div>
+
+            <!-- Câu 2: Thu nhập hàng năm -->
+            <div class="form-group">
+                <label class="form-label" for="income">What is your yearly income range? <span class="required">*</span></label>
+                <select id="income" name="income" required>
+                    <option value="" disabled selected>-- Select income range --</option>
+                    <option value="under_25k">Under $25,000</option>
+                    <option value="25k_50k">$25,000 - $49,999</option>
+                    <option value="50k_100k">$50,000 - $99,999</option>
+                    <option value="above_100k">$100,000 or more</option>
+                </select>
+            </div>
+
+            <!-- Câu 3: Giới tính -->
+            <div class="form-group">
+                <label class="form-label">Gender <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="option-item">
+                        <input type="radio" name="gender" value="Male" required> Male
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="gender" value="Female"> Female
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="gender" value="Non-binary"> Non-binary / Other
+                    </label>
+                </div>
+            </div>
+
+            <!-- Câu 4: Tần suất sử dụng -->
+            <div class="form-group">
+                <label class="form-label">Which of the following best describes your usage of our product? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="option-item">
+                        <input type="radio" name="usageFrequency" value="daily" required> Daily
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="usageFrequency" value="weekly"> Weekly
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="usageFrequency" value="monthly"> Monthly
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="usageFrequency" value="rarely"> Rarely
+                    </label>
+                </div>
+            </div>
+
+            <!-- Câu 5: Bảng đánh giá Matrix -->
+            <div class="form-group">
+                <label class="form-label">Please rate your satisfaction with the following aspects: <span class="required">*</span></label>
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Unsatisfied</th>
+                            <th>Neutral</th>
+                            <th>Satisfied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product Quality</td>
+                            <td><input type="radio" name="satisfaction_quality" value="1" required></td>
+                            <td><input type="radio" name="satisfaction_quality" value="2"></td>
+                            <td><input type="radio" name="satisfaction_quality" value="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Customer Service</td>
+                            <td><input type="radio" name="satisfaction_service" value="1" required></td>
+                            <td><input type="radio" name="satisfaction_service" value="2"></td>
+                            <td><input type="radio" name="satisfaction_service" value="3"></td>
+                        </tr>
+                        <tr>
+                            <td>Overall Experience</td>
+                            <td><input type="radio" name="satisfaction_overall" value="1" required></td>
+                            <td><input type="radio" name="satisfaction_overall" value="2"></td>
+                            <td><input type="radio" name="satisfaction_overall" value="3"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Câu 6: Ý kiến đóng góp -->
+            <div class="form-group">
+                <label class="form-label" for="comments">Do you have any additional comments or suggestions?</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Type your response here..."></textarea>
+            </div>
+
+            <!-- Nút Submit -->
+            <button type="submit" class="btn-submit">Submit Survey</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
