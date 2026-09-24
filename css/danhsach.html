@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Danh sách trong CSS</title>
+    <style>
+        /* CSS Tổng thể */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0f172a;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .section-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2563eb;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #1d4ed8;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* 1. Thay đổi Kiểu Đánh dấu (list-style-type) */
+        ul.type-circle { list-style-type: circle; }
+        ul.type-square { list-style-type: square; }
+        ul.type-none   { list-style-type: none; padding-left: 0; }
+
+        ol.type-roman  { list-style-type: upper-roman; }
+        ol.type-alpha  { list-style-type: lower-alpha; }
+
+        /* 2. Đánh dấu bằng Hình ảnh (list-style-image) */
+        ul.custom-image {
+            /* Sử dụng ảnh icon làm dấu bullet */
+            list-style-image: url('https://img.icons8.com/color/16/000000/checkmark.png');
+        }
+
+        /* 3. Vị trí Đánh dấu (list-style-position) */
+        ul.pos-outside {
+            list-style-position: outside;
+            background-color: #e2e8f0;
+            padding: 15px 30px;
+        }
+
+        ul.pos-inside {
+            list-style-position: inside;
+            background-color: #e2e8f0;
+            padding: 15px 15px;
+        }
+
+        /* 4. Thuộc tính Rút gọn (list-style Shorthand) */
+        ul.shorthand-list {
+            /* Cú pháp: type position image */
+            list-style: square inside url('https://img.icons8.com/color/16/000000/star.png');
+        }
+
+        /* 5. Định kiểu Danh sách với Màu sắc */
+        ol.colored-list {
+            background: #fef2f2;
+            padding: 20px 40px;
+            border-radius: 6px;
+        }
+
+        ol.colored-list li {
+            background: #fee2e2;
+            color: #991b1b;
+            font-weight: 600;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>THỰC HÀNH CÁC THUỘC TÍNH DANH SÁCH TRONG CSS</h1>
+
+    <!-- Phần 1: list-style-type -->
+    <div class="section-box">
+        <h2>1. Thuộc tính list-style-type</h2>
+        <p><strong>Danh sách không thứ tự (ul):</strong></p>
+        <ul class="type-circle">
+            <li>Ký hiệu hình tròn rỗng (circle)</li>
+        </ul>
+        <ul class="type-square">
+            <li>Ký hiệu hình vuông (square)</li>
+        </ul>
+        <ul class="type-none">
+            <li>Bỏ ký hiệu đánh dấu đầu dòng (none)</li>
+        </ul>
+
+        <p><strong>Danh sách có thứ tự (ol):</strong></p>
+        <ol class="type-roman">
+            <li>Số La Mã hoa (upper-roman)</li>
+            <li>Mục thứ hai</li>
+        </ol>
+        <ol class="type-alpha">
+            <li>Chữ cái thường (lower-alpha)</li>
+            <li>Mục thứ hai</li>
+        </ol>
+    </div>
+
+    <!-- Phần 2: list-style-image -->
+    <div class="section-box">
+        <h2>2. Thuộc tính list-style-image</h2>
+        <ul class="custom-image">
+            <li>Sử dụng hình ảnh làm dấu bullet</li>
+            <li>Sử dụng hình ảnh làm dấu bullet</li>
+        </ul>
+    </div>
+
+    <!-- Phần 3: list-style-position -->
+    <div class="section-box">
+        <h2>3. Thuộc tính list-style-position</h2>
+        <p><strong>Outside (Mặc định):</strong></p>
+        <ul class="pos-outside">
+            <li>Ký hiệu nằm ngoài khối nội dung của phần tử li. Văn bản xuống dòng sẽ thẳng hàng với chữ bên trên.</li>
+        </ul>
+
+        <p><strong>Inside:</strong></p>
+        <ul class="pos-inside">
+            <li>Ký hiệu nằm bên trong khối nội dung của phần tử li. Văn bản xuống dòng sẽ thụt lùi dưới ký hiệu bullet.</li>
+        </ul>
+    </div>
+
+    <!-- Phần 4: list-style shorthand -->
+    <div class="section-box">
+        <h2>4. Thuộc tính rút gọn list-style</h2>
+        <ul class="shorthand-list">
+            <li>Kết hợp kiểu square + inside + icon ảnh</li>
+            <li>Nếu ảnh không tải được, nó sẽ quay về hiển thị ô vuông (square)</li>
+        </ul>
+    </div>
+
+    <!-- Phần 5: Kết hợp Màu sắc -->
+    <div class="section-box">
+        <h2>5. Định kiểu Danh sách kết hợp Màu sắc</h2>
+        <ol class="colored-list">
+            <li>Mục danh sách màu đỏ 1</li>
+            <li>Mục danh sách màu đỏ 2</li>
+            <li>Mục danh sách màu đỏ 3</li>
+        </ol>
+    </div>
+
+</body>
+</html>
