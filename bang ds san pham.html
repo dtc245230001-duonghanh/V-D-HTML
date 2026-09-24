@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #0f172a;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.8rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 650px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px 20px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        tr {
+            border-bottom: 1px solid #e2e8f0;
+            transition: background-color 0.2s ease;
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .number-col {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Danh sách sản phẩm</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th class="number-col">Giá (VNĐ)</th>
+                <th class="number-col">Số lượng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop Dell XPS 13</td>
+                <td class="number-col">28.500.000</td>
+                <td class="number-col">10</td>
+            </tr>
+            <tr>
+                <td>Điện thoại iPhone 15 Pro</td>
+                <td class="number-col">27.990.000</td>
+                <td class="number-col">15</td>
+            </tr>
+            <tr>
+                <td>Tai nghe Sony WH-1000XM5</td>
+                <td class="number-col">8.490.000</td>
+                <td class="number-col">25</td>
+            </tr>
+            <tr>
+                <td>Bàn phím cơ Keychron K2</td>
+                <td class="number-col">1.950.000</td>
+                <td class="number-col">30</td>
+            </tr>
+            <tr>
+                <td>Chuột Logitech MX Master 3S</td>
+                <td class="number-col">2.450.000</td>
+                <td class="number-col">18</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
