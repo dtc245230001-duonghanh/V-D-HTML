@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Với Màu Nền Và Ảnh Nền</title>
+    <style>
+        /* Reset CSS cơ bản */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1. Thiết lập màu nền (background-color) cho toàn bộ trang web */
+        body {
+            background-color: #eef2f5; /* Màu nền xám nhạt dịu mắt */
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333333;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Định dạng tiêu đề chính h1 */
+        h1 {
+            color: #1a2a3a;
+            margin-bottom: 15px;
+        }
+
+        /* Định dạng đoạn văn mô tả */
+        .description {
+            font-size: 18px;
+            color: #555555;
+            margin-bottom: 30px;
+        }
+
+        /* 2. Thiết lập ảnh nền (background-image) và căn giữa nội dung cho khối div */
+        .important-box {
+            /* Kết hợp lớp phủ màu mờ (overlay) và ảnh nền để chữ hiển thị rõ ràng */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner.jpg');
+            background-size: cover;          /* Ảnh phủ kín toàn bộ khối div */
+            background-position: center;     /* Căn giữa vị trí ảnh nền */
+            background-repeat: no-repeat;    /* Không lặp lại ảnh */
+
+            /* Căn giữa nội dung văn bản trong khối div */
+            text-align: center;
+            color: #ffffff;                  /* Màu chữ trắng tương phản nổi bật */
+
+            /* Kích thước và căn giữa khối div ra giữa màn hình */
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 50px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .important-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .important-box p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tiêu đề chính -->
+    <h1>Chào mừng đến với trang web của tôi</h1>
+
+    <!-- Đoạn văn mô tả -->
+    <p class="description">
+        Đây là trang web thực hành thiết lập màu nền (background-color) và ảnh nền (background-image) bằng CSS.
+    </p>
+
+    <!-- Khối div chứa nội dung quan trọng có ảnh nền -->
+    <div class="important-box">
+        <h2>Thông Tin Quan Trọng</h2>
+        <p>Khối nội dung này được định dạng nổi bật với ảnh nền, lớp phủ màu mờ và chữ căn giữa.</p>
+    </div>
+
+</body>
+</html>
