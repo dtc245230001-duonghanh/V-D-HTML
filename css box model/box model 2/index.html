@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Records - CSS Box Model 2</title>
+    <style type="text/css">
+      /* 1. Reset CSS cơ bản */
+      html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* 2. Định dạng body & container chung */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        color: #333333;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* 3. Tiêu đề trang (Header) */
+      h1 {
+        color: #111111;
+        font-size: 32px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #333333;
+      }
+
+      h2 {
+        color: #222222;
+        font-size: 22px;
+        margin-top: 25px;
+        margin-bottom: 12px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #dddddd;
+      }
+
+      h3 {
+        color: #444444;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+      }
+
+      /* 4. Menu điều hướng (Navigation Bar) */
+      body > ul:first-of-type {
+        list-style: none;
+        background-color: #333333;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        display: flex;
+        gap: 15px;
+      }
+
+      body > ul:first-of-type li {
+        display: inline;
+      }
+
+      body > ul:first-of-type a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 3px;
+        transition: background-color 0.2s ease;
+      }
+
+      body > ul:first-of-type a:hover {
+        background-color: #555555;
+      }
+
+      /* 5. Định dạng văn bản và đường dẫn */
+      p {
+        color: #444444;
+        margin-bottom: 12px;
+      }
+
+      a {
+        color: #880000;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* 6. Danh sách thành viên (Members List) */
+      ul {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      /* 7. Danh sách Tour Dates */
+      body > ul:last-of-type {
+        list-style: none;
+        margin-left: 0;
+      }
+
+      body > ul:last-of-type li {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-left: 4px solid #880000;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      body > ul:last-of-type li p {
+        margin-bottom: 2px;
+      }
+
+      body > ul:last-of-type li p:first-child {
+        font-weight: bold;
+        color: #222222;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Open Source Records</h1>
+    
+    <!-- Thanh điều hướng nav -->
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="bands.html">Bands</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <h2>Regular Expressions</h2>
+    <h3>Bio</h3>
+    <p>Regular Expressionists are a hip-hop trio from New York City.</p>
+
+    <h3>Members</h3>
+    <ul>
+      <li>Rekt - Vocals</li>
+      <li>Face-like - Vocals</li>
+      <li>DJ Regex Capture - Decks</li>
+    </ul>
+
+    <h3>Albums</h3>
+    <p>This group has no albums released, but they are recording one album right now.</p>
+
+    <h2>Tour Dates</h2>
+    <ul>
+      <li>
+        <p>July 16th, 2014 @ 7:00pm</p>
+        <p><a href="http://hob.com">House of Blues</a> - Orlando, FL</p>
+      </li>
+      <li>
+        <p>July 17th, 2014 @ 7:30pm</p>
+        <p>Jannus Landing - Tampa, FL</p>
+      </li>
+      <li>
+        <p>July 19th, 2014 @ 8:00pm</p>
+        <p>The Tabernacle - Atlanta, GA</p>
+      </li>
+      <li>
+        <p>July 20th, 2014 @ 7:30pm</p>
+        <p>40 Watt Club - Athens, GA</p>
+      </li>
+    </ul>
+  </body>
+</html>
