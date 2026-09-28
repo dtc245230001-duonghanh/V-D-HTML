@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành tạo bố cục web cơ bản</title>
+    <style>
+        /* Reset CSS cơ bản */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1. Thiết lập font chữ cho cả trang */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        /* Khung chứa toàn bộ trang - căn giữa màn hình */
+        #main {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+        }
+
+        /* 2 & 3. Phân vùng Header (Banner/Logo) */
+        #head {
+            height: 120px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            line-height: 120px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* 4 & 5. Phân vùng Liên kết đầu trang (Nav bar) */
+        #head-link {
+            height: 40px;
+            background-color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        #head-link ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+
+        #head-link ul li {
+            float: left;
+        }
+
+        #head-link ul li a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0 15px;
+            line-height: 40px;
+            font-weight: bold;
+        }
+
+        #head-link ul li a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* 6 & 7. Phân vùng Cột Trái (Left Sidebar) */
+        #left {
+            width: 200px;
+            min-height: 400px;
+            background-color: #e8edf2;
+            float: left;
+            padding: 10px;
+            border-right: 1px solid #dddddd;
+        }
+
+        #left ul {
+            list-style-type: none;
+        }
+
+        #left ul li {
+            margin-bottom: 8px;
+        }
+
+        #left ul li a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 8 & 9. Phân vùng Nội dung Chính (Content Center) */
+        #content {
+            width: 580px;
+            min-height: 400px;
+            background-color: #ffffff;
+            float: left;
+            padding: 15px;
+        }
+
+        .content-block {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        /* 8 & 9. Phân vùng Cột Phải (Right Sidebar) */
+        #right {
+            width: 220px;
+            min-height: 400px;
+            background-color: #e8edf2;
+            float: left;
+            padding: 10px;
+            border-left: 1px solid #dddddd;
+        }
+
+        /* 10 & 11. Phân vùng Chân trang (Footer) */
+        #footer {
+            clear: both; /* Ngắt hiệu ứng float của 3 cột trên */
+            height: 60px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            line-height: 60px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Khung chính #main -->
+    <div id="main">
+
+        <!-- Header -->
+        <div id="head">
+            LOGO & BANNER TRANG WEB
+        </div>
+
+        <!-- Menu liên kết đầu trang -->
+        <div id="head-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột bên trái -->
+        <div id="left">
+            <h3>Menu Trái</h3>
+            <br>
+            <ul>
+                <li><a href="#">- Tin tức chung</a></li>
+                <li><a href="#">- Thông báo</a></li>
+                <li><a href="#">- Lịch học</a></li>
+                <li><a href="#">- Tài liệu</a></li>
+            </ul>
+        </div>
+
+        <!-- Nội dung chính giữa -->
+        <div id="content">
+            <div class="content-block">
+                <h2>Hot News</h2>
+                <p>Nội dung các tin tức nổi bật và quan trọng nhất được cập nhật liên tục tại đây.</p>
+            </div>
+            <div class="content-block">
+                <h2>Photo Slide</h2>
+                <p>Khu vực hiển thị hình ảnh trình chiếu tĩnh hoặc slider động.</p>
+            </div>
+            <div class="content-block">
+                <h2>News 1</h2>
+                <p>Chi tiết bài viết tin tức số 1 được trình bày trong phân vùng content này.</p>
+            </div>
+        </div>
+
+        <!-- Cột bên phải -->
+        <div id="right">
+            <h3>Thông Tin Phụ</h3>
+            <br>
+            <p><strong>Lịch hoạt động:</strong> Thứ 2 - Thứ 6</p>
+            <br>
+            <p><strong>Biểu đồ:</strong> 85% Hoàn thành</p>
+            <br>
+            <p><strong>Bản đồ:</strong> Thái Nguyên, Việt Nam</p>
+        </div>
+
+        <!-- Chân trang -->
+        <div id="footer">
+            © 2026 Website của tôi - Bản quyền thuộc về chủ sở hữu
+        </div>
+
+    </div>
+
+</body>
+</html>
