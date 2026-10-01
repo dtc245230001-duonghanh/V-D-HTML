@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    padding: 30px 20px;
+    color: #333;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Card chứa từng ví dụ */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #007bff;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.desc {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- Ví dụ 1: row nowrap --- */
+.container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.container-1 > div {
+    background-color: #007bff;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* --- Ví dụ 2: row-reverse nowrap --- */
+.container-2 {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.container-2 > div {
+    background-color: #28a745;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 4px;
+}
