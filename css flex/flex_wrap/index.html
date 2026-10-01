@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS flex-wrap Property</title>
+    <link rel="stylesheet" href="flex_wrap.css">
+</head>
+<body>
+
+    <h1 class="page-title">Thực hành Thuộc tính CSS `flex-wrap`</h1>
+
+    <!-- 1. wrap -->
+    <section class="card">
+        <h2>1. flex-wrap: wrap</h2>
+        <p class="desc">Cho phép các Flex Items tự động xuống dòng khi thiếu không gian chứa.</p>
+        <div class="container ex-wrap">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </section>
+
+    <!-- 2. nowrap -->
+    <section class="card">
+        <h2>2. flex-wrap: nowrap (Mặc định)</h2>
+        <p class="desc">Ép tất cả các Flex Items nằm trên cùng 1 dòng, không tự động xuống dòng.</p>
+        <div class="container ex-nowrap">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </section>
+
+    <!-- 3. wrap-reverse -->
+    <section class="card">
+        <h2>3. flex-wrap: wrap-reverse</h2>
+        <p class="desc">Cho phép xuống dòng nhưng đảo ngược hướng của trục Cross Axis (dòng mới đẩy lên trên).</p>
+        <div class="container ex-wrap-reverse">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </section>
+
+    <!-- 4. initial -->
+    <section class="card">
+        <h2>4. flex-wrap: initial</h2>
+        <p class="desc">Đưa giá trị của thuộc tính về mặc định của CSS (tương đương <code>nowrap</code>).</p>
+        <div class="container ex-initial">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </section>
+
+</body>
+</html>
