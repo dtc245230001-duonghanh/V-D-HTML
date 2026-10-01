@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    padding: 30px 20px;
+    color: #333;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Card bao bọc ví dụ */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #007bff;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.desc {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Base Flex Container */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    gap: 10px;
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.item {
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #17a2b8;
+    color: #fff;
+    flex-grow: 0; /* Mặc định không tăng kích thước */
+}
+
+/* --- Ví dụ 1: flex-grow trên Div 2 --- */
+.ex1 .item-grow {
+    flex-grow: 1;
+    background-color: #28a745; /* Đổi màu xanh lá để làm nổi bật */
+}
+
+/* --- Ví dụ 2: Nhiều tỷ lệ grow --- */
+.ex2 .item-grow-1 {
+    flex-grow: 1;
+    background-color: #ffc107;
+    color: #333;
+}
+
+.ex2 .item-grow-2 {
+    flex-grow: 2;
+    background-color: #dc3545;
+}
