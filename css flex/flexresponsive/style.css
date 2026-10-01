@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Container chính chia khung dọc */
+.site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Footer */
+.header, .footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Menu */
+.nav {
+    background-color: #34495e;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Phần bao bọc Main Content và Sidebar trên Desktop */
+.main-wrapper {
+    display: flex;
+    flex: 1; /* Tự động lấp đầy chiều cao còn lại để đẩy Footer xuống đáy */
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Main Content chiếm 3 phần */
+.main-content {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.main-content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Sidebar chiếm 1 phần */
+.sidebar {
+    flex: 1;
+    background-color: #e2e8f0;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* --- Yêu cầu Responsive trên Mobile (Màn hình dưới 768px) --- */
+@media (max-width: 768px) {
+    /* Chuyển các phần tử trong main-wrapper thành xếp dọc */
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    /* Menu điều hướng xếp dọc trên điện thoại */
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
