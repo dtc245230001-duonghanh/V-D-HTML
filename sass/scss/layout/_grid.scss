@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$gap-size / 2;
+}
+
+[class*="col-"] {
+  padding: $gap-size / 2;
+  width: 100%;
+}
+
+// Mobile first & Responsive columns using mixins
+@include respond-to("sm") {
+  .col-sm-6 { width: 50%; }
+  .col-sm-4 { width: 33.333%; }
+}
+
+@include respond-to("md") {
+  .col-md-4 { width: 33.333%; }
+  .col-md-3 { width: 25%; }
+}
+
+@include respond-to("lg") {
+  .col-lg-3 { width: 25%; }
+}
