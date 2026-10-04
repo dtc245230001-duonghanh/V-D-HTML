@@ -1,0 +1,241 @@
+/* Reset CSS mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* Tránh tràn header khi bấm link neo */
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 1. Thanh Điều Hướng (Navbar - Sticky & Fixed) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #f39c12;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Header Với Ảnh Nền & Lớp Phủ Blur */
+.header {
+    background: url('../images/banner.jpg') center/cover no-repeat;
+    /* Nền dự phòng nếu chưa có ảnh banner.jpg */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80');
+    color: white;
+    text-align: center;
+    padding: 160px 20px 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: inherit;
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.header p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* Nút bấm CTA */
+.btn {
+    display: inline-block;
+    background: #1abc9c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4);
+}
+
+.btn:hover {
+    background: #16a085;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(22, 160, 133, 0.6);
+}
+
+/* 3. Content Section & Card Layout (CSS Grid) */
+.content {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+}
+
+.content h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1abc9c;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.card {
+    background: white;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 4. Footer 2 Cột (CSS Flexbox) */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 50px;
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.footer-left p, .footer-right p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.footer-right p:last-child {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+/* Responsive cho thiết bị di động */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.95rem;
+        padding: 5px 8px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+}
