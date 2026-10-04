@@ -3,46 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Ch? Gi?n Lu?c</title>
+    <title>Trang Web Xem Ho?t Hình Tr?c Tuy?n Cho Tr? Em</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- HEADER & HEAD-LINK (C? d?nh ? d?u trang) -->
     <header class="main-header">
-        <h1>Tiêu d? Trang Web</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Trang ch?</a></li>
-                <li><a href="#">Gi?i thi?u</a></li>
-                <li><a href="#">D?ch v?</a></li>
-                <li><a href="#">Liên h?</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <h1>HO?T HÌNH <span>KIDS</span></h1>
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm ki?m phim ho?t hình...">
+                <button type="button">Tìm ki?m</button>
+            </div>
+
+            <nav class="head-link">
+                <ul>
+                    <li><a href="#" class="active">Trang ch?</a></li>
+                    <li><a href="#">M?i c?p nh?t</a></li>
+                    <li><a href="#">Xem nhi?u nh?t</a></li>
+                    <li><a href="#">Th? lo?i</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="page-container">
-        <aside class="sidebar left-sidebar">
-            <h3>Sidebar Trái</h3>
-            <ul>
-                <li>M?c 1</li>
-                <li>M?c 2</li>
-                <li>M?c 3</li>
-            </ul>
-        </aside>
+    <!-- CONTENT CONTAINER -->
+    <div class="main-container">
+        <div class="content">
+            
+            <!-- LEFT CONTENT: Menu danh sách video -->
+            <aside class="left-content">
+                <h2>Danh Sách Phim</h2>
+                <ul class="video-list">
+                    <li class="video-item active">
+                        <img src="https://picsum.photos/id/1018/120/70" alt="Doraemon">
+                        <div class="video-info">
+                            <h4>Doraemon T?p Ð?c Bi?t</h4>
+                            <span>Thuy?t minh - 1080p</span>
+                        </div>
+                    </li>
+                    <li class="video-item">
+                        <img src="https://picsum.photos/id/1025/120/70" alt="Conan">
+                        <div class="video-info">
+                            <h4>Thám T? L?ng Danh Conan</h4>
+                            <span>Thuy?t minh - 720p</span>
+                        </div>
+                    </li>
+                    <li class="video-item">
+                        <img src="https://picsum.photos/id/1069/120/70" alt="Tom and Jerry">
+                        <div class="video-info">
+                            <h4>Tom và Jerry Phiêu Luu</h4>
+                            <span>Thuy?t minh - 1080p</span>
+                        </div>
+                    </li>
+                    <li class="video-item">
+                        <img src="https://picsum.photos/id/237/120/70" alt="Hành Trình Chú Chó">
+                        <div class="video-info">
+                            <h4>Hành Trình C?a Chú Chó</h4>
+                            <span>Thuy?t minh - 720p</span>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
 
-        <main class="main-content">
-            <h2>N?i dung chính c?a trang</h2>
-            <p>Ðây là khu v?c ch?a n?i dung quan tr?ng nh?t c?a trang web. Chúng ta s? d?t các bài vi?t, s?n ph?m, ho?c thông tin chi ti?t t?i dây.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-        </main>
+            <!-- RIGHT CONTENT: Khu v?c phát video -->
+            <main class="right-content">
+                <div class="video-player-wrapper">
+                    <!-- S? d?ng iframe nhúng YouTube video an toàn cho tr? em -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Video Player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
 
-        <aside class="sidebar right-sidebar">
-            <h3>Sidebar Ph?i</h3>
-            <p>Ðây là m?t sidebar khác, có th? ch?a qu?ng cáo, bài vi?t liên quan ho?c các widget khác.</p>
-        </aside>
+                <div class="video-details">
+                    <h1>Doraemon T?p Ð?c Bi?t - Hành Trình Ð?n Vuong Qu?c Mây</h1>
+                    <div class="video-meta">
+                        <span>Lu?t xem: 1,250,000</span> • <span>Ch?t lu?ng: Full HD 1080p</span> • <span>Thuy?t minh Ti?ng Vi?t</span>
+                    </div>
+                    <hr>
+                    <p class="video-description">
+                        B? phim ho?t hình ch?n l?c có n?i dung giáo d?c, nhân van, phù h?p cho l?a tu?i thi?u nhi. Video ch?t lu?ng cao, t?i nhanh, hoàn toàn không chèn qu?ng cáo gây gián do?n tr?i nghi?m c?a bé.
+                    </p>
+                </div>
+
+                <!-- Video xem thêm b?ng th? <video> HTML5 n?i b? -->
+                <div class="local-video-section">
+                    <h3>Xem th? Video m?u HTML5 (Th? &lt;video&gt;)</h3>
+                    <video controls width="100%" poster="https://picsum.photos/id/1018/800/450">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Trình duy?t c?a b?n không h? tr? th? video HTML5.
+                    </video>
+                </div>
+            </main>
+
+        </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>&copy; 2026 HO?T HÌNH KIDS - Trang web phim ho?t hình an toàn ch?n l?c cho tr? em.</p>
+        <p>B?n quy?n thu?c v? h? th?ng Ho?t Hình Tr?c Tuy?n. Không ch?a qu?ng cáo thuong h?i.</p>
+    </footer>
+
 </body>
 </html>

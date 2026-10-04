@@ -1,103 +1,309 @@
-/* Thi?t l?p co b?n */
-html {
-    height: 100%;
+/* --- THI?T L?P CHUNG --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    min-height: 1500px; /* Ð?m b?o d? chi?u cao d? cu?n ki?m tra fixed header */
-    padding-top: 70px; /* Ð?y n?i dung xu?ng tránh b? header c? d?nh che */
-    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 75px; /* T?o kho?ng tr?ng tránh b? Header fixed che n?i dung */
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+a {
+    text-decoration: none; /* B? g?ch chân link */
+    color: inherit;
+    transition: all 0.3s ease;
 }
 
-/* Header c? d?nh */
+ul {
+    list-style: none;
+}
+
+/* --- HEADER C? Ð?NH (FIXED HEADER) --- */
 .main-header {
-    position: fixed; /* C? d?nh header */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: #ff5722;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* N?m trên cùng m?i ph?n t? */
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.main-header h1 {
-    margin: 0;
-    font-size: 24px;
+.logo h1 {
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 1px;
 }
 
-.main-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.logo h1 span {
+    color: #ffeb3b;
+}
+
+/* Thanh tìm ki?m */
+.search-bar {
     display: flex;
+    flex: 1;
+    max-width: 400px;
 }
 
-.main-header nav ul li {
-    margin-left: 20px;
+.search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
 }
 
-.main-header nav ul li a {
-    color: white;
-    text-decoration: none;
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #e64a19;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
     font-weight: bold;
 }
 
-/* Container b? c?c Flexbox 3 c?t */
-.page-container {
+.search-bar button:hover {
+    background-color: #d84315;
+}
+
+/* Head-link Navigation */
+.head-link ul {
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    gap: 15px;
+}
+
+/* Hi?u ?ng liên k?t khi rê chu?t (Hover): Bôi d?m & d?i màu */
+.head-link a {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.head-link a:hover,
+.head-link a.active {
+    font-weight: bold;
+    color: #ffeb3b;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- B? C?C CHÍNH (CONTENT) --- */
+.main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.content {
+    display: flex;
     gap: 20px;
 }
 
-.sidebar {
+/* LEFT CONTENT (Menu danh sách video) */
+.left-content {
+    flex: 0 0 320px;
     background-color: #fff;
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    height: fit-content;
 }
 
-.left-sidebar {
-    width: 200px;
+.left-content h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff5722;
+    border-bottom: 2px solid #ff5722;
+    padding-bottom: 5px;
 }
 
-.right-sidebar {
-    width: 200px;
+.video-list .video-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
 }
 
-.main-content {
+.video-list .video-item:hover,
+.video-list .video-item.active {
+    background-color: #ffe0b2;
+}
+
+.video-list img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.video-info h4 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.video-info span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* RIGHT CONTENT (Khu v?c phát video) */
+.right-content {
+    flex: 1;
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    flex-grow: 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Ki?u dáng cho n?i dung bên trong sidebar */
-.sidebar h3 {
-    margin-top: 0;
+/* Khung video Youtube responsive t? l? 16:9 */
+.video-player-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.video-player-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-details {
+    margin-top: 15px;
+}
+
+.video-details h1 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.video-meta {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.video-details hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 12px;
+}
+
+.video-description {
+    font-size: 14px;
+    color: #444;
+}
+
+.local-video-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #ddd;
+}
+
+.local-video-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
     color: #333;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
+.local-video-section video {
+    border-radius: 8px;
 }
 
-.sidebar ul li {
-    margin-bottom: 10px;
-    color: #555;
+/* --- FOOTER --- */
+.main-footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+/* --- RESPONSIVE DESIGN (M?C NÂNG CAO) --- */
+
+/* Tablet (Màn hình du?i 992px) */
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column-reverse; /* Ðua video lên trên, danh sách xu?ng du?i */
+    }
+
+    .left-content {
+        flex: 1 1 100%;
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        order: 3;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Ði?n tho?i di d?ng (Màn hình du?i 600px) */
+@media (max-width: 600px) {
+    body {
+        padding-top: 130px; /* Tang padding do header co l?i thành nhi?u dòng */
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .head-link ul {
+        justify-content: space-around;
+    }
+
+    .head-link a {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    .left-content, .right-content {
+        padding: 12px;
+    }
+
+    .video-details h1 {
+        font-size: 16px;
+    }
 }
