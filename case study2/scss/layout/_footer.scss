@@ -1,0 +1,48 @@
+.footer {
+  background: $dark-color;
+  color: $white;
+  padding: 40px 0 20px;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    @include respond-to("md") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-col {
+      h4 {
+        margin-bottom: 15px;
+        color: $primary-color;
+      }
+
+      p, a {
+        color: lighten($dark-color, 50%);
+        text-decoration: none;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-bottom: 8px;
+
+          a:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid lighten($dark-color, 15%);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: lighten($dark-color, 40%);
+  }
+}
