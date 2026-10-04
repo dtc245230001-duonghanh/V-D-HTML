@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Th?c hành T?o Menu D?c Dropdown</title>
+    <style>
+        /* B? sung CSS reset font và margin/padding d? nh?t quán trên các trình duy?t */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Ð?nh d?ng cho th? ul trong menu */
+        #menu ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Ð?nh d?ng cho các ph?n t? th? li */
+        #menu li {
+            list-style: none; /* B? ký hi?u dánh d?u d?u danh sách */
+            position: relative; /* Cho phép các danh sách con d?nh v? tuong d?i theo li này */
+            width: 120px; /* C? d?nh chi?u r?ng */
+            height: 30px; /* C? d?nh chi?u cao */
+            padding: 0 20px; /* C? d?nh l? trái và ph?i */
+            background-color: black; /* Màu n?n den */
+            line-height: 30px; /* C? d?nh chi?u cao dòng d? can gi?a ch? theo chi?u d?c */
+            cursor: pointer; /* Chuy?n con tr? chu?t sang hình bàn tay */
+            border-bottom: 1px solid #444; /* Ðu?ng vi?n nh? phân cách gi?a các m?c */
+        }
+
+        /* Ð?nh d?ng các liên k?t th? a bên trong th? li */
+        #menu a {
+            text-decoration: none; /* B? g?ch chân m?c d?nh c?a link */
+            color: white; /* Màu ch? tr?ng */
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Hi?u ?ng khi di chu?t qua ph?n t? li */
+        #menu li:hover {
+            background-color: #333333; /* Ð?i màu n?n khi hover */
+        }
+
+        /* Ð?nh d?ng cho các danh sách con (Sub-menu) */
+        #menu li ul {
+            position: absolute; /* Ð?nh v? tuy?t d?i d?a theo li cha */
+            top: 0; /* Góc trên b?ng 0 so v?i li cha */
+            left: 160px; /* D?ch sang ph?i dúng b?ng t?ng chi?u r?ng + padding c?a li cha (120px + 20px*2) */
+            visibility: hidden; /* M?c d?nh ?n danh sách con */
+        }
+
+        /* Hi?n th? danh sách con khi dua chu?t qua th? li cha */
+        #menu li:hover > ul {
+            visibility: visible; /* Hi?n menu con tuong ?ng khi hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Trang ch?</a></li>
+            <li>
+                <a href="#services">D?ch v?</a>
+                <ul>
+                    <li><a href="#design">Thi?t k? Web</a></li>
+                    <li><a href="#seo">T?i uu SEO</a></li>
+                    <li><a href="#hosting">Hosting</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#products">S?n ph?m</a>
+                <ul>
+                    <li><a href="#software">Ph?n m?m</a></li>
+                    <li><a href="#hardware">Ph?n c?ng</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Liên h?</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
