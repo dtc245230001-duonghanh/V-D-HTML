@@ -1,0 +1,11 @@
+# Tạo cấu trúc thư mục
+New-Item -ItemType Directory -Path "scss\abstracts", "scss\base", "scss\layout", "scss\components" -Force
+
+# Tạo các file partial SCSS
+New-Item -ItemType File -Path "scss\abstracts\_variables.scss" -Force
+New-Item -ItemType File -Path "scss\abstracts\_mixins.scss" -Force
+New-Item -ItemType File -Path "scss\base\_global.scss" -Force
+New-Item -ItemType File -Path "scss\layout\_container.scss" -Force
+New-Item -ItemType File -Path "scss\components\_buttons.scss" -Force
+New-Item -ItemType File -Path "scss\components\_cards.scss" -Force
+New-Item -ItemType File -Path "scss\main.scss" -Force
