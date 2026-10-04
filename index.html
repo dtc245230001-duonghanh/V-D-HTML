@@ -1,22 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Th?c h�nh Ph?i m�u �on t�ng (Monochromatic)</title>
+    <style>
+        /* Quy t?c chung & M�u ch? den cho to�n b? trang (Bu?c 6) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #000000;
+        }
+
+        /* Bu?c 2: M�u n?n trang web th�nh m�u b?c 4 (#00BFF2) */
+        body {
+            background-color: #00BFF2;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Header */
+        header {
+            background-color: #00ADEE; /* M�u b?c 1 */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #ffffff; /* �i?m nh?n ti�u d? */
+        }
+
+        /* Bu?c 3: Thay d?i m�u n?n ph?n ON SALE / PREVIEW th�nh m�u b?c 1 (#00ADEE) ho?c b?c 2 (#00B2EF) */
+        .badge-sale {
+            background-color: #00ADEE; /* M�u b?c 1 */
+            color: #ffffff;
+            display: inline-block;
+            padding: 6px 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Bu?c 4: �?i m�u n?n ph?n n?i dung th�nh m�u b?c 7 (#8DD7F7), gi? m�u ch? den */
+        .content {
+            background-color: #8DD7F7; /* M�u b?c 7 */
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        /* Bu?c 5: �?i m�u n?n ph?n footer th�nh m�u b?c 9 (#C6E9FA) */
+        footer {
+            background-color: #C6E9FA; /* M�u b?c 9 */
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #B3E3F8;
+        }
+    </style>
 </head>
 <body>
-    <h1>"Chào mừng đến với trang web của tôi"</h1>
-    <h2>"Giới thiệu bản thân"</h2>
-    
-<p>
-    Sở thích lớn nhất của tôi là học hỏi và khám phá các kiến thức lịch sử. Việc tìm hiểu về những sự kiện trong quá khứ giúp tôi hiểu rõ hơn về sự phát triển của thế giới và đúc kết được nhiều bài học giá trị. Bên cạnh đó, tôi cũng rất thích dành thời gian nghiên cứu các công nghệ mới và tự tay thiết kế, hoàn thiện các sản phẩm phần mềm mang tính ứng dụng cao.
-</p>
 
+    <div class="container">
+        <header>
+            <h1>CodeGym - Kh�a h?c L?p tr�nh Web</h1>
+        </header>
 
-<p>
-    Mục tiêu học lập trình của tôi là nắm vững tư duy mã nguồn, làm chủ các ngôn ngữ lập trình cùng các công nghệ phát triển web và xử lý dữ liệu. Tôi hướng tới việc xây dựng thành thạo các hệ thống ứng dụng hoàn chỉnh, tối ưu trải nghiệm người dùng và sẵn sàng đảm nhận các dự án phần mềm thực tế trong tương lai.
-</p>
+        <div class="content">
+            <span class="badge-sale">ON SALE / PREVIEW</span>
+            <h2>Ph?i m�u don t�ng tr�n trang web</h2>
+            <p>Trang web n�y du?c ph?i m�u theo quy t?c don t�ng (Monochromatic), s? d?ng m�u ch? d?o xanh l�/xanh duong (#00ADEE) l�m m�u b?c 1 v� gi?m d?n s?c d?.</p>
+            <p>S? k?t h?p gi?a c�c c?p d? m�u nh?t d?n gi�p giao di?n tr? n�n h�i h�a, d? nh�n m� v?n gi? du?c t�nh chuy�n nghi?p.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Th?c h�nh ph?i m�u HTML/CSS - CodeGym</p>
+        </footer>
+    </div>
 
 </body>
 </html>
