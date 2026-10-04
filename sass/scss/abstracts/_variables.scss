@@ -1,11 +1,12 @@
-$bg-color: #f5f5f5;
-$card-bg: #ffffff;
-$text-color: #333333;
-$gap-size: 15px;
-$border-radius: 8px;
-$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$dark-color: #1a1a1a;
+$light-bg: #f8f9fa;
+$white: #ffffff;
+$text-muted: #6c757d;
+$border-color: #e9ecef;
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
-// Breakpoints
-$breakpoint-sm: 576px;
+// Responsive Breakpoints
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;

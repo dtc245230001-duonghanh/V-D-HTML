@@ -1,0 +1,36 @@
+.header {
+  background: $white;
+  box-shadow: $box-shadow;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .nav-container {
+    @include flex-between;
+    padding: 15px 0;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $primary-color;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+
+      li a {
+        text-decoration: none;
+        color: $dark-color;
+        font-weight: 500;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
