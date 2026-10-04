@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hu?ng d?n t?o Fixed Header và Fixed Footer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fixed Top Navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #00adee;
+            color: #ffffff;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 20px;
+            margin-top: 50px; /* Tránh n?i dung b? che b?i fixed navbar */
+            margin-bottom: 60px; /* Tránh n?i dung b? che b?i fixed footer */
+            height: 1500px; /* T?o chi?u cao l?n d? cu?n trang */
+            background-color: #f9f9f9;
+        }
+
+        .main h1 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .main h2 {
+            color: #666666;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .main p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #444444;
+        }
+
+        /* Fixed Bottom Footer */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #222222;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 14px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header / Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <!-- Main Body Content -->
+    <div class="main">
+        <h1>Fixed Top Menu & Fixed Footer</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top and footer stays at the bottom while scrolling</h2>
+        <p>Ðây là ph?n n?i dung trang web. Khi b?n cu?n chu?t xu?ng du?i, thanh Menu v?n luôn c? d?nh ? ph?n trên cùng c?a màn hình.</p>
+        <p>Ð?ng th?i, thanh Footer phía du?i cung du?c gán thu?c tính fixed d? luôn hi?n th? ? dáy màn hình.</p>
+        <p>Cu?n xu?ng n?a d? tr?i nghi?m tính nang fixed layout...</p>
+    </div>
+
+    <!-- Fixed Footer -->
+    <div class="footer">
+        <p>&copy; 2026 Th?c hành Fixed Layout - T?t c? quy?n du?c b?o luu.</p>
+    </div>
+
+</body>
+</html>
