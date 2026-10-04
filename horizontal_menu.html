@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Th?c hành T?o Menu Ngang Dropdown</title>
+    <style>
+        /* Reset margin, padding và thi?t l?p phông ch? chu?n */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Phân vùng cho trình don: chi?u cao, kho?ng cách và màu n?n */
+        #menu {
+            height: 40px;
+            background-color: #333333;
+            border-bottom: 2px solid #00adee;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Ð?nh nghia b? ch?n cho các ph?n t? trong danh sách */
+        #menu li {
+            float: left; /* Ð?t các m?c n?m ngang */
+            position: relative; /* Giúp danh sách con d?nh v? theo m?c cha */
+        }
+
+        /* Ð?nh nghia b? ch?n cho các liên k?t trong trình don */
+        #menu a {
+            display: block;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            background-color: #333333;
+        }
+
+        /* Chuy?n màu n?n liên k?t khi di chu?t qua (hover) */
+        #menu a:hover {
+            background-color: red; /* Màu d? theo dúng yêu c?u bài t?p */
+        }
+
+        /* Ð?nh nghia v? trí hi?n th? và ?n m?c d?nh cho danh sách con */
+        #menu ul ul {
+            position: absolute;
+            top: 40px; /* Hi?n th? ngay phía du?i menu cha */
+            left: 0;
+            visibility: hidden; /* M?c d?nh ?n trình don con */
+            z-index: 1000;
+        }
+
+        /* Trình don con x?p d?c bên trong dropdown */
+        #menu ul ul li {
+            float: none;
+        }
+
+        /* Hi?n th? trình don con khi dua con tr? qua m?c ch?n tuong ?ng ? trình don cha */
+        #menu li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Trang ch?</a></li>
+            <li>
+                <a href="#services">D?ch v?</a>
+                <ul>
+                    <li><a href="#web">Thi?t k? Web</a></li>
+                    <li><a href="#app">L?p trình App</a></li>
+                    <li><a href="#seo">T?i uu SEO</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#products">S?n ph?m</a>
+                <ul>
+                    <li><a href="#software">Ph?n m?m</a></li>
+                    <li><a href="#hardware">Ph?n c?ng</a></li>
+                </ul>
+            </li>
+            <li><a href="#about">Gi?i thi?u</a></li>
+            <li><a href="#contact">Liên h?</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
